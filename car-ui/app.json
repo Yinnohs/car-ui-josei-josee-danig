@@ -3,7 +3,7 @@
     "name": "car-ui",
     "slug": "car-ui",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landsacpe",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
