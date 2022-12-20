@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Text } from "react-native";
 
-const ONE_MINUTE = 60_000;
+const ONE_MINUTE = 1_000;
 
 export const Clock = ({ textColor, clockSize }) => {
   const [time, setTime] = useState(new Date());
@@ -18,7 +18,7 @@ export const Clock = ({ textColor, clockSize }) => {
 
   return (
     <Text style={{ color: textColor, fontSize: clockSize }}>
-      {time.getHours()} : {time.getMinutes()}
+      {time.toLocaleTimeString()}
     </Text>
   );
 };
