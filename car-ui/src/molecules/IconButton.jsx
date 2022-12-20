@@ -1,5 +1,5 @@
 import React from 'react'
-import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
+import FontAwesomeIcon from '@expo/vector-icons/MaterialCommunityIcons'
 
 export function IconButton({iconSize, iconColor, iconName, action}) {
   return (
