@@ -1,1 +1,1 @@
-export {getWeatherInformation} from './weatherApi'
+export { getWeatherInformation } from './weatherApi'
