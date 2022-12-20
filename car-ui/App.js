@@ -1,14 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import {Clock} from './src/molecules'
+import { Clock, IconButton } from "./src/molecules";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
-        Open up App.js to start working on your app!
-      </Text>
-      <Clock textColor={'#FFF'}/>
+    <View style={[styles.flexRow,styles.container]}>
+      <View style={styles.flexRow}>
+        <IconButton iconName={"map"} iconColor={"#5995F4"} iconSize={32} />
+        <IconButton iconName={"gear"} iconColor={"#FFF"} iconSize={32} />
+      </View>
+      <Clock textColor={"#FFF"} clockSize={25} />
       <StatusBar style="auto" />
     </View>
   );
@@ -19,7 +20,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#181216",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
+  },
+  flexRow:{
+    display: 'flex',
+    flexDirection:'row',
   },
   text: {
     color: "#FFF",

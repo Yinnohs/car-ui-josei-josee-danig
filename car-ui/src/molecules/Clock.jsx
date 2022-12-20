@@ -3,7 +3,7 @@ import { Text } from "react-native";
 
 const ONE_MINUTE = 60_000;
 
-export const Clock = ({textColor}) => {
+export const Clock = ({ textColor, clockSize }) => {
   const [time, setTime] = useState(new Date());
   const udpateTime = () => {
     setTime(new Date());
@@ -16,8 +16,11 @@ export const Clock = ({textColor}) => {
     };
   }, []);
 
-  return <Text style={{color:textColor}}
-  >{time.getHours()} : {time.getMinutes()}</Text>;
+  return (
+    <Text style={{ color: textColor, fontSize: clockSize }}>
+      {time.getHours()} : {time.getMinutes()}
+    </Text>
+  );
 };
 
 export default Clock.molecule;
