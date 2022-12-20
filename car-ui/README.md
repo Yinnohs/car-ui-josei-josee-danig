@@ -1,4 +1,5 @@
-## Introducción
+## Activity Header 
+### Introducción
 
 En esta práctica vamos a cambiar de tercio. En esta ocasión la mayor parte del esfuerzo la vamos a dedicar a analizar la interfaz de usuario de vehículos eléctricos o híbridos de distintas marcas.
 
@@ -40,3 +41,31 @@ La función que desempeña en la interfaz.
 <br>
 
 De todos los elementos que hayan localizado en el paso anterior, en el vídeo deberán seleccionar uno e implementarlo indicando cómo se ha desarrollado paso a paso. El elemento implementado no podrá ser un átomo y tendrá que mostrar cierta interactividad.
+
+<br>
+
+## How to use the app
+
+you need to create a .env file with this keys
+
+```
+API_KEY = 0a82a37feea645c2b7d222324222012
+API_URL = https://api.weatherapi.com/v1/
+```
+
+You can find your onw keys here: https://api.weatherapi.com
+<br>
+
+We decided to use an API call to fetch the temperature Data to emulate the real scenario.
+We know that the cars temperature sensors give us the data faster than the API itself. 
+
+This API is used by the Weather component.
+
+## Car ui Used as inpiration:
+
+The main inspiration of the car UI was the peudgeot e-208 UI.
+<br>
+We selected this car due to the Price - gamma of the car being more accesible and more common to the normal user experiencie.
+
+<br>
+<img src="./imgs/iu-208-e.jpeg"/>
