@@ -1,10 +1,15 @@
-import React from 'react'
-import FontAwesomeIcon from '@expo/vector-icons/MaterialCommunityIcons'
+import React from "react";
+import FontAwesomeIcon from "@expo/vector-icons/MaterialCommunityIcons";
 
-export function IconButton({iconSize, iconColor, iconName, action}) {
+export function IconButton({ iconSize, iconColor, iconName, action }) {
   return (
-    <FontAwesomeIcon name={iconName} size={iconSize} color={iconColor} onPress={action}/>
-  )
+    <FontAwesomeIcon
+      name={iconName}
+      size={iconSize}
+      color={iconColor}
+      onPress={action}
+    />
+  );
 }
 
-export default IconButton
+export default IconButton;
