@@ -1,1 +1,1 @@
-export {InfoBar} from './InfoBar'
+export { InfoBar } from './InfoBar'

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { PixelRatio, StyleSheet, Text, View } from "react-native";
 import { Clock, IconButton } from "../molecules";
+import { theme } from "../theme";
 
 export function InfoBar() {
   const [isFanOn, setIsFanOn] = useState(false);
@@ -17,38 +18,38 @@ export function InfoBar() {
 
   return (
     <View style={[styles.flexRow, styles.container, styles.shadow]}>
-      <Text style={{ color: "#55F538", fontSize: 25, fontWeight: "800" }}>
+      <Text style={styles.temperature}>
         {" "}
         15 ºC
       </Text>
       <View>
-        <Text style={{ color: "#FFF", fontSize: 20 }}>
+        <Text style={{ color: theme.textColor, fontSize: 20 }}>
           {isFanOn ? "ON " : "OFF"}
         </Text>
         <IconButton
           iconName={"fan"}
-          iconColor={"#FFF"}
-          iconSize={32}
+          iconColor={theme.textColor}
+          iconSize={theme.iconSize}
           action={() => handleFanStatus()}
         />
       </View>
 
-      <Text style={{ fontSize: 40, color: "#FFF" }}> -- </Text>
+      <Text style={{ fontSize: 40, color: theme.textColor }}> -- </Text>
       <IconButton
         iconName={isMuted ? "volume-mute" : "volume-high"}
-        iconColor={"#5995F4"}
-        iconSize={32}
-        action={()=> handleMute() }
+        iconColor={theme.secondaryColor}
+        iconSize={theme.iconSize}
+        action={() => handleMute()}
       />
       <View style={styles.flexRow}>
         <IconButton
           iconName={"map-marker"}
-          iconColor={"#5995F4"}
-          iconSize={32}
+          iconColor={theme.secondaryColor}
+          iconSize={theme.iconSize}
         />
-        <IconButton iconName={"cog"} iconColor={"#FFF"} iconSize={32} />
+        <IconButton iconName={"cog"} iconColor={theme.textColor} iconSize={theme.iconSize} />
       </View>
-      <Clock textColor={"#FFF"} clockSize={25} />
+      <Clock textColor={theme.primaryColor} clockSize={theme.textMainSize} />
     </View>
   );
 }
@@ -56,9 +57,9 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
     height: PixelRatio.getPixelSizeForLayoutSize(30),
-    backgroundColor: "#111",
+    backgroundColor: theme.backGroundHeaderColor,
     borderBottomWidth: 2.2,
-    borderBottomColor: "#55F538",
+    borderBottomColor: theme.primaryColor,
     alignItems: "center",
     justifyContent: "space-around",
   },
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text: {
-    color: "#FFF",
+    color: theme.textColor,
   },
 
   shadow: {
@@ -79,5 +80,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.17,
     shadowRadius: 2.2,
     elevation: 15,
+  },
+  temperature: {
+    color: theme.primaryColor,
+    fontSize: theme.textMainSize,
+    fontWeight: "800"
   },
 });

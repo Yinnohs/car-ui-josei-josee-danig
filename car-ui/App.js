@@ -2,10 +2,10 @@ import { StyleSheet, View } from "react-native";
 import { InfoBar } from "./src/components";
 
 export default function App() {
-  
+
   return (
-    <View style={[styles.flexCol ,styles.container]}>
-      <InfoBar/>
+    <View style={[styles.flexCol, styles.container]}>
+      <InfoBar />
     </View>
   );
 }
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#181216",
   },
-  flexCol:{
+  flexCol: {
     display: 'flex',
   },
   text: {
