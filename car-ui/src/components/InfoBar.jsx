@@ -19,7 +19,7 @@ export function InfoBar() {
 
   return (
     <View style={[styles.flexRow, styles.container, styles.shadow]}>
-      <Weather/>
+      <Weather />
       <View>
         <Text style={{ color: theme.textColor, fontSize: 20 }}>
           {isFanOn ? "ON " : "OFF"}
@@ -55,8 +55,8 @@ export function InfoBar() {
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
-    top:0,
-    left:0,
+    top: 0,
+    left: 0,
     width: "100%",
     height: PixelRatio.getPixelSizeForLayoutSize(30),
     backgroundColor: theme.backGroundHeaderColor,
