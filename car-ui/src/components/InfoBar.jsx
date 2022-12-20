@@ -26,6 +26,7 @@ export function InfoBar() {
         <Text style={{ color: theme.textColor, fontSize: 20 }}>
           {isFanOn ? "ON " : "OFF"}
         </Text>
+        {/* TODO: FIX: ADD MONOSPACED FONT */}
         <IconButton
           iconName={"fan"}
           iconColor={theme.textColor}
