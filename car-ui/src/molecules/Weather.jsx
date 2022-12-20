@@ -4,7 +4,9 @@ import { getWeatherInformation } from "../connection";
 import { theme } from "../theme";
 
 export function Weather() {
+
   const [weatherInfo, setWeatherInfo] = useState({});
+
   const handleMount = async () => {
     const data = await getWeatherInformation();
     setWeatherInfo(data);
