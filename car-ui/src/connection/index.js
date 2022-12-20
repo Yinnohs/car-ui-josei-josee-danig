@@ -1,0 +1,1 @@
+export {getWeatherInformation} from './weatherApi'
