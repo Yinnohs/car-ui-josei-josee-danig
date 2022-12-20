@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { PixelRatio, StyleSheet, Text, View } from "react-native";
-import { Clock, IconButton } from "../molecules";
+import { Clock, IconButton, Weather } from "../molecules";
 import { theme } from "../theme";
+
 
 export function InfoBar() {
   const [isFanOn, setIsFanOn] = useState(false);
@@ -18,10 +19,7 @@ export function InfoBar() {
 
   return (
     <View style={[styles.flexRow, styles.container, styles.shadow]}>
-      <Text style={styles.temperature}>
-        {" "}
-        15 ºC
-      </Text>
+      <Weather/>
       <View>
         <Text style={{ color: theme.textColor, fontSize: 20 }}>
           {isFanOn ? "ON " : "OFF"}
@@ -56,6 +54,9 @@ export function InfoBar() {
 }
 const styles = StyleSheet.create({
   container: {
+    position: 'relative',
+    top:0,
+    left:0,
     width: "100%",
     height: PixelRatio.getPixelSizeForLayoutSize(30),
     backgroundColor: theme.backGroundHeaderColor,
